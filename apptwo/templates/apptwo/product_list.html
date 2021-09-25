@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>allpds</title>
+</head>
+<body>
+
+<a href="http://127.0.0.1:8000/ap1/logoutuser/">LOGOUT</a>
+<br><br>
+<table border="1">
+    <thead>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>PRICE</th>
+    <th>QUANTITY</th>
+    <th>GETDETAIL</th>
+
+    </thead>
+    {% for object in object_list %}
+    <tr>
+        <td>{{object.id}}</td>
+        <td>{{object.name}}</td>
+        <td>{{object.price}}</td>
+        <td>{{object.quantity}}</td>
+        <td><a href="/ap2/{{object.id}}/pddetail/">DETAIL</a></td>
+
+    </tr>
+    {% endfor %}
+</table>
+<br><br>
+<h1><a href="/ap2/createpd/">ADD NEW PRODUCT</a></h1>
+
+
+</body>
+</html>

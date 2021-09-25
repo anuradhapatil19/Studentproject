@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PD</title>
+</head>
+<body>
+<a href="http://127.0.0.1:8000/ap1/logoutuser/">LOGOUT</a><br><br>
+<form method="POST" action="/ap2/createpd/" enctype="multipart/form-data">
+
+    <!-- Security token -->
+    {% csrf_token %}
+
+    <!-- Using the formset -->
+    {{ form.as_p }}
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
